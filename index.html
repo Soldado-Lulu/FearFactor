@@ -1,11 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Extreme Adventures</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <h1>Extreme Adventures</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#actividades">Actividades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Vive la Aventura</h2>
+            <p>Descubre emociones fuertes con nuestras actividades extremas.</p>
+            <a href="#actividades" class="btn">Ver Actividades</a>
+        </div>
+    </section>
+
+    <section id="actividades" class="activities">
+        <div class="container">
+            <h2>Nuestras Actividades</h2>
+            <div class="activity-grid">
+                <div class="activity">
+                    <img src="https://via.placeholder.com/300" alt="Puenting">
+                    <h3>Puenting</h3>
+                    <p>Salta desde puentes altos y siente la adrenalina.</p>
+                </div>
+                <div class="activity">
+                    <img src="https://via.placeholder.com/300" alt="Rafting">
+                    <h3>Rafting</h3>
+                    <p>Navega por ríos rápidos y desafía las aguas bravas.</p>
+                </div>
+                <div class="activity">
+                    <img src="https://via.placeholder.com/300" alt="Parapente">
+                    <h3>Parapente</h3>
+                    <p>Vuela sobre paisajes increíbles con parapente.</p>
+                </div>
+                <div class="activity">
+                    <img src="https://via.placeholder.com/300" alt="Rappel / Escalada">
+                    <h3>Rappel / Escalada</h3>
+                    <p>Desciende y escala paredes rocosas con expertos.</p>
+                </div>
+                <div class="activity">
+                    <img src="https://via.placeholder.com/300" alt="Trekking">
+                    <h3>Trekking</h3>
+                    <p>Explora senderos y montañas en emocionantes rutas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¿Listo para la aventura? Contáctanos para más información.</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <textarea name="message" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Extreme Adventures. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
