@@ -4,73 +4,110 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #d32f2f; /* Rojo */
     color: #fff;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 120px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 1rem;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+header nav ul li a:hover {
+    color: #f1c40f; /* Amarillo */
 }
 
 /* Vision & Mision Section */
 .vision-mision {
-    padding: 2rem 0;
-    background-color: #f9f9f9;
+    padding: 4rem 1rem;
+    background-color: #222; /* Negro */
+    color: #fff;
     text-align: center;
+}
+
+.vision-mision h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d32f2f; /* Rojo */
 }
 
 .vision-mision-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
 .vision, .mision {
     flex: 1 1 45%;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    background: #333; /* Gris oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    color: #fff;
+}
+
+.vision h3, .mision h3 {
+    color: #d32f2f; /* Rojo */
+}
+
+.vision p, .mision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Activities Section */
 .activities {
-    padding: 2rem 1rem;
-    background-color: #f4f4f4;
+    padding: 4rem 1rem;
+    background-color: #fff;
 }
 
 .activities h2 {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d32f2f; /* Rojo */
 }
 
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .carousel::-webkit-scrollbar {
@@ -78,30 +115,39 @@ header nav ul li a {
 }
 
 .activity-card {
-    flex: 0 0 auto; /* Ajusta el tamaño del contenedor a la imagen */
+    flex: 0 0 auto;
     scroll-snap-align: start;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: auto; /* Permite que la tarjeta se adapte al tamaño de la imagen */
-    margin: 0 auto; /* Centra la tarjeta en el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #d32f2f; /* Rojo */
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .activity-card img {
     width: 100%;
-    height: auto; /* Deja que la altura de la imagen se ajuste a su proporción original */
+    height: 200px;
     object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 .activity-card h3 {
-    margin: 1rem;
     font-size: 1.5rem;
+    margin: 1rem;
+    color: #d32f2f; /* Rojo */
 }
 
 .activity-card p {
-    margin: 0 1rem 1rem;
     color: #555;
+    margin: 0 1rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .activity-card ul {
@@ -119,22 +165,35 @@ header nav ul li a {
     display: block;
     margin: 1rem auto;
     padding: 0.5rem 1.5rem;
-    background-color: #ff7f27;
+    background-color: #d32f2f; /* Rojo */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .activity-card button:hover {
-    background-color: #e76a1d;
+    background-color: #b71c1c; /* Rojo oscuro */
 }
 
 /* Contact Section */
 .contact {
-    padding: 2rem 0;
+    padding: 4rem 1rem;
     text-align: center;
+    background-color: #d32f2f; /* Rojo */
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .contact form {
@@ -143,33 +202,42 @@ header nav ul li a {
     gap: 1rem;
     max-width: 500px;
     margin: 0 auto;
+    background-color: #222; /* Negro */
+    padding: 2rem;
+    border-radius: 8px;
 }
 
 .contact form input, .contact form textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+    border-color: #d32f2f; /* Rojo */
 }
 
 .contact form button {
-    padding: 0.75rem;
-    background-color: #4CAF50;
+    padding: 1rem;
+    background-color: #f1c40f; /* Amarillo */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .contact form button:hover {
-    background-color: #45A049;
+    background-color: #f39c12; /* Amarillo oscuro */
 }
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #222; /* Negro */
     color: #fff;
     text-align: center;
     padding: 1rem;
@@ -178,18 +246,28 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .activity-card {
-        flex: 0 0 auto;
+    header .container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .activity-card img {
-        height: auto; /* Ajusta la altura de la imagen de forma proporcional */
+    .vision-mision-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .activity-card {
+        width: 80%;
+    }
+
+    .contact form {
+        width: 90%;
     }
 }
 
 @media (max-width: 480px) {
-    .activity-card img {
-        height: auto; /* Ajusta la altura de la imagen de forma proporcional en pantallas pequeñas */
+    .activities h2 {
+        font-size: 2rem;
     }
 
     .activity-card h3 {
@@ -197,6 +275,10 @@ footer {
     }
 
     .activity-card p, .activity-card ul li {
+        font-size: 0.9rem;
+    }
+
+    .contact form input, .contact form textarea {
         font-size: 0.9rem;
     }
 }
