@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Vision & Mision Section */
+.vision-mision {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.vision-mision-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.vision, .mision {
+    flex: 1 1 45%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+/* Activities Section */
+.activities {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.activities h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.activity-card {
+    flex: 0 0 auto; /* Ajusta el tamaño del contenedor a la imagen */
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: auto; /* Permite que la tarjeta se adapte al tamaño de la imagen */
+    margin: 0 auto; /* Centra la tarjeta en el contenedor */
+}
+
+.activity-card img {
+    width: 100%;
+    height: auto; /* Deja que la altura de la imagen se ajuste a su proporción original */
+    object-fit: cover;
+}
+
+.activity-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.activity-card p {
+    margin: 0 1rem 1rem;
+    color: #555;
+}
+
+.activity-card ul {
+    margin: 0 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.activity-card ul li {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.activity-card button {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    background-color: #ff7f27;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.activity-card button:hover {
+    background-color: #e76a1d;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form button {
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact form button:hover {
+    background-color: #45A049;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .activity-card {
+        flex: 0 0 auto;
+    }
+
+    .activity-card img {
+        height: auto; /* Ajusta la altura de la imagen de forma proporcional */
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card img {
+        height: auto; /* Ajusta la altura de la imagen de forma proporcional en pantallas pequeñas */
+    }
+
+    .activity-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .activity-card p, .activity-card ul li {
+        font-size: 0.9rem;
+    }
+}
